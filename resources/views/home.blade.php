@@ -1,19 +1,5 @@
 <x-app-layout>
-    <div class="py-12">
-        <div class="max-w-xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900">
-                    {{-- @if (isset($posts) && $posts->count() > 0) --}}
-                    @foreach ($posts as $post)
-                        <p>{{ $post->caption }}</p>
-                    @endforeach
-                    {{-- @else
-                        <p>Tidak ada post yang ditemukan.</p>
-                    @endif --}}
-                </div>
-            </div>
-        </div>
-    </div>
+    @include('components.post.post-card')
     <div class="py-12">
         <div class="max-w-xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">

@@ -35,13 +35,16 @@ class PostConroller extends Controller
             'image' => 'required'
         ]);
 
-        $post = new Post;
-        $post->user_id = $request->user_id;
-        $post->caption = $request->caption;
-        $post->image = $request->image;
-        $post->save();
+        $imageName = time().'.'.$request->image->extension();  
 
-        return redirect('/');
+        Post::create([
+            'user_id' => $request->user_id,
+            'caption' => $request->caption,
+            'image' => $request->file('image')->store('images/posts', 'public')
+        ]);
+
+        return back()->with('success', 'Image uploaded successfully!')
+        ->with('image', $imageName); 
     }
 
     /**
