@@ -1,6 +1,12 @@
 <x-app-layout>
-    <div class="space-y-6">
+    <div class="home-page">
         @include('components.post.post-upload')
-        @include('components.post.post-card')
+
+        <div class="title">
+            <h1 class="text-center">Latest Post</h1>
+        </div>
+        <div class="content space-y-6">
+            @include('components.post.post-card')
+        </div>
     </div>
 </x-app-layout>
