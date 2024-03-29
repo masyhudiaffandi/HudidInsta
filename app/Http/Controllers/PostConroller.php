@@ -76,9 +76,17 @@ class PostConroller extends Controller
                      ->with('image', $post->image);
     }
 
-    public function destroy(string $id)
+    public function destroy(string $id) 
     {
-        Post::findOrFail($id)->delete();
-        return back()->with('success', 'Image deleted successfully!');
+      $post = Post::findOrFail($id);
+
+      if(auth()->user()->id !== $post->user_id){
+         abort(403); 
+      }
+    
+      $post->delete();
+      
+      return back()->with('success', 'Post deleted successfully!');
     }
+    
 }
