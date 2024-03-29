@@ -23,5 +23,5 @@
         </div>
     </div>
 @else
-    <p>Anda belum login</p>
+    <p class="text-center">Anda belum login</p>
 @endif
