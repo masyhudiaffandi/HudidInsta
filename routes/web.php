@@ -5,6 +5,7 @@ use App\Http\Controllers\LikeController;
 use App\Http\Controllers\PostConroller;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\SocialiteController;
 use App\Livewire\FeedbackBtn;
 
 Route::get('/', [PostConroller::class, 'index'])->name('home');
@@ -23,5 +24,8 @@ Route::middleware('auth')->group(function () {
     Route::post('/comments/store', 'CommentController@store')->name('comments.store');
 
 });
+
+Route::get('/auth/{provider}', [SocialiteController::class, 'redirectToProvider']);
+Route::get('/auth/{provider}/callback', [SocialiteController::class, 'handleProvideCallback']);
 
 require __DIR__.'/auth.php';

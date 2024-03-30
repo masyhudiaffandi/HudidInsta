@@ -49,4 +49,10 @@
         <p class="text-sm text-gray-600">{{ __('Don\'t have an account?') }}</p>
         <a href="{{ route('register') }}" class="font-medium text-indigo-600 hover:text-indigo-500">{{ __('Register') }}</a>
     </div>
+
+    <div class="mt-4">
+        <a href="{{ url('auth/google') }}" class="block text-center py-2 px-4 border border-transparent rounded-md text-sm font-medium text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+            {{ __('Log in with Google') }}
+        </a>
+    </div>
 </x-guest-layout>

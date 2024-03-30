@@ -44,9 +44,20 @@
                 {{ __('Already registered?') }}
             </a>
 
-            <x-primary-button class="ms-4">
+            <x-primary-button type="submit" class="ms-4">
                 {{ __('Register') }}
             </x-primary-button>
         </div>
     </form>
+
+    <div class="py-6 text-center">
+        <p>-OR-</p>
+    </div>
+
+    <!-- Google Register Button -->
+    <div class="mt-4">
+        <a href="{{ url('auth/google') }}" class="block text-center py-2 px-4 border border-transparent rounded-md text-sm font-medium text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+            {{ __('Register with Google') }}
+        </a>
+    </div>
 </x-guest-layout>
