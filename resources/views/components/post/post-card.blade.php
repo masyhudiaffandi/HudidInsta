@@ -28,5 +28,7 @@
         </div>
     @endforeach
 @else
-    <p class="text-center">Tidak ada post yang ditemukan.</p>
+    <div class="post-not-found flex items-center justify-center h-96">
+        <p class="text-center">Tidak ada post yang ditemukan.</p>
+    </div>
 @endif
