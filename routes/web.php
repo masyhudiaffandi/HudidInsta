@@ -20,6 +20,8 @@ Route::middleware('auth')->group(function () {
     Route::resource('post', PostConroller::class);  
     Route::resource('comment', CommentController::class);  
     Route::post('/posts/{post}/like', [LikeController::class, 'toggleLike'])->name('posts.like');
+    Route::post('/comments/store', 'CommentController@store')->name('comments.store');
+
 });
 
 require __DIR__.'/auth.php';

@@ -9,8 +9,8 @@
                 <div class="content-image">
                     <img src="{{ asset('storage/images/posts/'.$post->image) }}" class="w-full" alt="">
                 </div>
-                <div class="content-feedback p-2 flex items-center">
-                    <div class="feedback-like">
+                <div class="content-feedback p-2 px-3 flex items-center gap-4">
+                    <div class="feedback-like space-y-2">
                         <form action="{{ route('posts.like', $post->id) }}" method="POST">
                             @csrf
                             <button type="submit" class="focus:outline-none">
@@ -21,11 +21,15 @@
                                 @endif
                             </button>
                         </form>
-                        <span>{{ $post->likes->count() }} Likes</span>
+                    </div>
+                    <div class="feedback-comment">
+                        @include('components.post.post-card.post-feedback')
                     </div>
                 </div>
-                
-                <div class="contet-caption px-2">
+                <div class="like-count px-3">
+                    <p>{{ $post->likes->count() }} Likes</p>
+                </div>
+                <div class="contet-caption px-3">
                     <p>
                         <span class="font-semibold">{{ $post->user->name }}</span>
                         {{ $post->caption }}
