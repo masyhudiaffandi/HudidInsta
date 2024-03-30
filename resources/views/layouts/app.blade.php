@@ -16,6 +16,7 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         <!-- Bootstrap JavaScript Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-N5s5BcBc4YBc8qJ6p4m2GsXL0dsZjpTUC5k8FHQErG1lEWpiYsXz0N3uf5Fmz8B" crossorigin="anonymous"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
 
     </head>
     <body class="font-sans antialiased">
