@@ -34,7 +34,10 @@
           </div>
       </div>
     @else
-      <p class="text-center">Anda belum login</p>
+      <div class="error-not-logged-in p-4 flex justify-center items-center space-x-2">
+        <p class="text-center">Anda belum login!</p>
+        <a href="/login" class="text-blue-500">login sekarang?</a>
+      </div>
     @endif
   </div>
 </div>
