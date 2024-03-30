@@ -4,7 +4,7 @@
             <div class="max-w-xl mx-auto sm:px-6 lg:px-8">
                 <div class="post-header py-4 flex justify-between">
                     <div class="post-author">
-                        <p class="font-bold">{{ $post->user->name }}</p>
+                        <p class="font-semibold">{{ $post->user->name }}</p>
                     </div>
                     @include('components.post.post-card.post-control')
                 </div>
@@ -16,7 +16,7 @@
                         @include('components.post.post-card.post-feedback')
                         <div class="post-caption mt-4">
                             <p class="space-x-6">
-                                <span class="font-bold">
+                                <span class="font-semibold">
                                     {{ $post->user->name }}
                                 </span>
                                 {{ $post->caption }}
