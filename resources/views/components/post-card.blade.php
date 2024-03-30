@@ -10,14 +10,18 @@
                     'likeRoute' => route('posts.like', $post->id),
                     'isLiked' => $post->likes->contains('user_id', auth()->user()->id)
                 ])
+                <button data-modal-target="default-modal" data-modal-toggle="default-modal" type="button">
+                    <i class="fa-regular fa-comment fa-xl text-black"></i>
+                </button>
+                @include('components.post.post-detail')
             @else
                 <a href="{{ route('login') }}" class="btn btn-primary">
                     <i class="fa-regular fa-heart fa-xl text-black"></i>
                 </a>
+                <a href="{{ route('login') }}" class="btnbtn-primary">
+                    <i class="far fa-comment fa-xl text-black"></i>
+                </a>
             @endauth
-            <div class="feedback-comment">
-                @include('components.post.post-card.feedback')
-            </div>
         </div>
         @include('components.post.post-card.like-count', ['likeCount' => $post->likes->count()])
         <div class="contet-caption px-3 pb-3">

@@ -3,24 +3,25 @@
 namespace App\Http\Controllers;
 
 use App\Models\Comment;
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class CommentController extends Controller
 {
-    public function store(Request $request)
+    public function store(Request $request, Post $post)
     {
         $request->validate([
-            'post_id' => 'required',
-            'content' => 'required',
+            'content' => 'required|string',
         ]);
 
+        // Create comment
         $comment = new Comment();
-        $comment->user_id = auth()->user()->id;
-        $comment->post_id = $request->post_id;
-        $comment->content = $request->content;
+        $comment->content = $request->input('content');
+        $comment->user_id = auth()->id(); // assuming you have authentication
+        $comment->post_id = $post->id;
         $comment->save();
 
-        return back()->with('success', 'Comment added successfully!');
+        return redirect()->back()->with('success', 'Comment added successfully.');
     }
     public function destroy(string $id)
     {
