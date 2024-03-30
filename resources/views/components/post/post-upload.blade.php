@@ -34,10 +34,16 @@
           </div>
       </div>
     @else
-      <div class="error-not-logged-in p-4 flex justify-center items-center space-x-2">
-        <p class="text-center">Anda belum login!</p>
-        <a href="/login" class="text-blue-500">login sekarang?</a>
+      <div class="error-not-logged-in p-4 flex justify-between">
+        <div class="error-message flex space-x-2 justify-center items-center">
+          <p class="text-center">Anda belum login!</p>
+          <a href="/login" class="text-blue-500">login sekarang?</a>
+        </div>
+        <div class="flex justify-between">
+          <button id="cancelModal" type="button" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">X</button>
+        </div>
       </div>
+      
     @endif
   </div>
 </div>
