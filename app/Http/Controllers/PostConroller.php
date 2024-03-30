@@ -23,17 +23,18 @@ class PostConroller extends Controller
         $request->validate([
             'user_id' => 'required',
             'caption' => 'required',
-            'image' => 'required'
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
         ]);
 
         $imageName = time().'.'.$request->image->extension();
-        $request->file('image')->storeAs('images/posts', $imageName, 'public');
+        $request->file('image')->storeAs('public/images/posts', $imageName);
 
-        Post::create([
+        $post = new Post([
             'user_id' => $request->user_id,
             'caption' => $request->caption,
             'image' => $imageName
         ]);
+        $post->save();
 
         return back()->with('success', 'Image uploaded successfully!')
                      ->with('image', $imageName);

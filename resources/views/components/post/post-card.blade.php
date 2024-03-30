@@ -11,7 +11,7 @@
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-4 text-gray-900">
                         <div class="post-image w-46">
-                            <img src="{{ asset('storage/'.$post->image) }}" class="w-full">
+                            <img src="{{ asset('storage/images/posts/'.$post->image) }}" class="w-full">
                         </div>
                         @include('components.post.post-card.post-feedback')
                         <div class="post-caption mt-4">
