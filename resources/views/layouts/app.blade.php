@@ -10,6 +10,7 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         
 
         <!-- Scripts -->
@@ -17,6 +18,7 @@
         <!-- Bootstrap JavaScript Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-N5s5BcBc4YBc8qJ6p4m2GsXL0dsZjpTUC5k8FHQErG1lEWpiYsXz0N3uf5Fmz8B" crossorigin="anonymous"></script>
         <script src="https://cdn.tailwindcss.com"></script>
+        
 
     </head>
     <body class="font-sans antialiased">
