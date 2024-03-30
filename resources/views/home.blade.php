@@ -9,4 +9,7 @@
             @include('components.post.post-card')
         </div>
     </div>
+    <!-- Tombol untuk membuka modal -->
+
+  
 </x-app-layout>
