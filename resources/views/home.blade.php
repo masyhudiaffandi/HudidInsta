@@ -1,13 +1,13 @@
 <x-app-layout>
-    <div class="home-page mt-6 md:px-2 px-6  max-w-md mx-auto sm:px-6 lg:px-8 ">
-        <div class="title">
-            <div class="header flex justify-between items-center">
-                <h1 class="font-semibold text-2xl">Latest Post</h1>
-                @include('components.post.post-upload')
+    <x-home.main pageTitle="Latest Post">
+        @if (isset($posts) && $posts->count() > 0)
+            @foreach ($posts as $post)
+                <x-post-card :post="$post" />
+            @endforeach
+        @else
+            <div class="post-not-found flex items-center justify-center h-96">
+                <p class="text-center">Tidak ada post yang ditemukan.</p>
             </div>
-        </div>
-        <div class="content space-y-6">
-            @include('components.post.post-card')
-        </div>
-    </div>
+        @endif
+    </x-home.main>
 </x-app-layout>
