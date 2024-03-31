@@ -85,22 +85,8 @@ You can now start the development server using Artisan:
 php artisan serve
 ```
 
-The application will be served at `http://localhost:8000`.
+The application will be served at `http://127.0.0.1:8000`/`http://localhost:8000`.
 
 ### Access the Application
 
-Open your web browser and navigate to `http://localhost:8000` to access InstaApp.
-
-## Contributing
-
-Thank you for considering contributing to InstaApp! Please refer to the [contribution guidelines](https://github.com/your-username/instaapp/blob/main/CONTRIBUTING.md) before making any contributions.
-
-## License
-
-InstaApp is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-
----
-
-Feel free to customize this `README.md` according to your project's specifics. The instructions provided above should help you get started with your Laravel project, InstaApp. If you have any further questions or need assistance, please reach out to us.
-
-**Happy Coding!**
+Open your web browser and navigate to `http://127.0.0.1:8000`/`http://localhost:8000` to access InstaApp.
