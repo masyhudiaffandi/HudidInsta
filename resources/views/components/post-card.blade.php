@@ -13,7 +13,7 @@
                 <button data-modal-target="default-modal" data-modal-toggle="default-modal" type="button">
                     <i class="fa-regular fa-comment fa-xl text-black"></i>
                 </button>
-                @include('components.post.post-detail')
+                @include('components.post.comment')
             @else
                 <a href="{{ route('login') }}" class="btn btn-primary">
                     <i class="fa-regular fa-heart fa-xl text-black"></i>

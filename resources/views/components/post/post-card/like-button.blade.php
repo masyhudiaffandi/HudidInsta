@@ -1,5 +1,5 @@
 <div class="feedback-like space-y-2">
-    <form action="{{ $likeRoute }}" method="POST">
+    <form action="{{ $likeRoute }}" method="post">
         @csrf
         <button type="submit" class="focus:outline-none">
             @if ($isLiked)

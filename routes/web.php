@@ -22,7 +22,6 @@ Route::middleware('auth')->group(function () {
     Route::resource('comment', CommentController::class);  
     Route::post('/posts/{post}/like', [LikeController::class, 'toggleLike'])->name('posts.like');
     Route::post('posts/{post}/comments', [CommentController::class, 'store'])->name('comments.store');
-
 });
 
 Route::get('/auth/{provider}', [SocialiteController::class, 'redirectToProvider']);
